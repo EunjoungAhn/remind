@@ -99,4 +99,6 @@ local.properties
 hs_err_pid*
 
 #DB 관련 설정 파일
-*.config
+*-Config.xml
+*.Config.xml
+*-context.xml
