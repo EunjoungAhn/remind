@@ -1,4 +1,4 @@
-package com.remind.ej.user;
+package com.remind.ej;
 
 public class UserVO {
 	private String uID;
