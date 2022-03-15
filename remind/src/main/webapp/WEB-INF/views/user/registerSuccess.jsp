@@ -8,5 +8,8 @@
 </head>
 <body>
 	<h1>가입에 성공하였습니다!</h1>
+	<ul>
+		<li><a href="../home">Home으로 이동</a></li>
+	</ul>
 </body>
 </html>

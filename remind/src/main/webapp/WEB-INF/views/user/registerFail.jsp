@@ -8,5 +8,8 @@
 </head>
 <body>
 	<h1>가입에 실패했습니다!</h1>
+	<ul>
+		<li><a href="user/register">다시 가입화면으로 이동</a></li>
+	</ul>
 </body>
 </html>
