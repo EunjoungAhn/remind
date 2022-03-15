@@ -6,10 +6,11 @@
 	<title>Home</title>
 </head>
 <body>
-<h1>
-	Hello world!  
-</h1>
-
-<P> 한글 테스트 ${serverTime}. </P>
+	<h1>
+		메인 home.jsp 입니다. 
+	</h1>
+	<ul>
+		<li><a href="user/register">Sign in</a></li>
+	</ul>
 </body>
 </html>

@@ -1,32 +1,53 @@
 package com.remind.ej;
 
 public class UserVO {
-	private String uID;
-	private String password;
+	private String UserID;
+	private String Password;
+	private String RegistDate;
 	
 	public UserVO() {
 		super();
 	}
 	
-	public UserVO(String uID, String password) {
+	public UserVO(String UserID, String Password, String RegistDate, byte IsEnabled) {
 		super();
-		this.uID = uID;
-		this.password = password;
+		this.UserID = UserID;
+		this.Password = Password;
+		this.RegistDate = RegistDate;
+		this.IsEnabled = IsEnabled;
 	}
 
-	public String getuID() {
-		return uID;
+	public String getUserID() {
+		return UserID;
 	}
-	public void setuID(String uID) {
-		this.uID = uID;
+	public void setUserID(String UserID) {
+		this.UserID = UserID;
 	}
 	
 	public String getPassword() {
-		return password;
+		return Password;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPassword(String Password) {
+		this.Password = Password;
 	}
+	
+	public String getRegistDate() {
+		return RegistDate;
+	}
+
+	public void setRegistDate(String registDate) {
+		RegistDate = registDate;
+	}
+
+	public byte getIsEnabled() {
+		return IsEnabled;
+	}
+
+	public void setIsEnabled(byte isEnabled) {
+		IsEnabled = isEnabled;
+	}
+
+	private byte IsEnabled;
 
 }

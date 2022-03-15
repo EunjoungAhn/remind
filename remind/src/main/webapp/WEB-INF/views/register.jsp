@@ -25,19 +25,15 @@ h1 {
 </head>
 <body>
 	<h1>회원가입</h1>
-	<form action="/user/create.do">
+	<form action="../user/create">
 		<table border=1>
 			<tr>
 				<td>아이디</td>
-				<td><input type="text" name="uID"></td>
+				<td><input type="text" name="UserID"></td>
 			</tr>
 			<tr>
 				<td>비밀번호</td>
-				<td><input type="text" name="password"></td>
-			</tr>
-			<tr>
-				<td>이름</td>
-				<td><input type="text" name="name"></td>
+				<td><input type="text" name="Password"></td>
 			</tr>
 			<tr>
 				<td colspan=2><button>회원가입</button></td>
