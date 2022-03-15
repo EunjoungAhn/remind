@@ -29,8 +29,4 @@ public class UserVO {
 		this.password = password;
 	}
 
-	@Override
-	public String toString() {
-		return "UserVO [uID=" + uID + ", password=" + password + "]";
-	}
 }
