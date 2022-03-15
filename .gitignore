@@ -101,4 +101,7 @@ hs_err_pid*
 #DB 관련 설정 파일
 *-Config.xml
 *.Config.xml
+*-config.xml
+*.config.xml
 *-context.xml
+*.properties
