@@ -2,14 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="user">
 	<insert id="create" parameterType="userVO">
-		INSERT INTO Member(uID, password, name) VALUES (#{uID}, #{password}, #{name})
+		INSERT INTO Member(UserID, Password, RegistDate, IsEnabled) VALUES (#{uID}, #{Password}, dateTime, 1)
 	</insert>
 
 	<select id="read" parameterType="userVO" resultType="userVO">
-		SELECT uID, name FROM Member WHERE uID = #{uID} AND password = #{password};
+		SELECT UserID, Password FROM Member WHERE UserID = #{UserID} AND Password = #{Password};
 	</select>
 	
 	<select id="readUID" parameterType="String" resultType="Integer">
-		SELECT count(uID) FROM Member WHERE uID = #{uID};
+		SELECT count(UserID) FROM Member WHERE UserID = #{UserID};
 	</select>
 </mapper>

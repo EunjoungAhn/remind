@@ -12,13 +12,16 @@ public class MemberController {
 
 	@RequestMapping("user/create.do")
 	public String register(UserVO vo) {
-		//int result = service.create(vo);
+		int result = service.create(vo);
 
-		/*
-		 if (result == 1) { return "user/registerSuccess"; } else { return
-		 "user/registerFail"; }
-		 */
-		return "register";
+		
+		 if (result == 1) { 
+			 return "user/registerSuccess"; 
+		 } else { 
+			 return "user/registerFail"; 
+		 }
+		 
+		//return "register";
 	}
 
 }
