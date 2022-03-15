@@ -11,15 +11,14 @@ public class MemberController {
 	UserService service;
 
 	@RequestMapping("user/create.do")
-	public String create(UserVO vo) {
-		int result = service.create(vo);
+	public String register(UserVO vo) {
+		//int result = service.create(vo);
 
-		if (result == 1) {
-			return "user/registerSuccess";
-		} else {
-			return "user/registerFail";
-		}
+		/*
+		 if (result == 1) { return "user/registerSuccess"; } else { return
+		 "user/registerFail"; }
+		 */
+		return "register";
 	}
-
 
 }
