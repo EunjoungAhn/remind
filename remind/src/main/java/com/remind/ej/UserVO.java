@@ -4,6 +4,7 @@ public class UserVO {
 	private String UserID;
 	private String Password;
 	private String RegistDate;
+	private byte IsEnabled;
 	
 	public UserVO() {
 		super();
@@ -47,7 +48,5 @@ public class UserVO {
 	public void setIsEnabled(byte isEnabled) {
 		IsEnabled = isEnabled;
 	}
-
-	private byte IsEnabled;
 
 }
