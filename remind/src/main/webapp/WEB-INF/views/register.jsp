@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +25,7 @@ h1 {
 </head>
 <body>
 	<h1>회원가입</h1>
-	<form action="../user/create.do">
+	<form action="/user/create.do">
 		<table border=1>
 			<tr>
 				<td>아이디</td>
