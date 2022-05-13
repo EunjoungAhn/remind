@@ -17,6 +17,9 @@
           <li>
             <a href="javascript:void(0)">Test1</a>
           </li>
+          <li>
+            <a href="javascript:void(0)">Test2</a>
+          </li>
         </ul>
 
         <div class="search">
