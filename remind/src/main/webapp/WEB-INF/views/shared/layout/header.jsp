@@ -3,7 +3,7 @@
   <header>
     <div class="inner">
       <a href="/" class="logo">
-        <img src="" alt="" />
+        <img src="" alt="remind logo" />
       </a>
 
       <div class="sub-menu">
