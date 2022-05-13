@@ -14,6 +14,9 @@
           <li>
             <a href="javascript:void(0)">My Memory</a>
           </li>
+          <li>
+            <a href="javascript:void(0)">Test1</a>
+          </li>
         </ul>
 
         <div class="search">
