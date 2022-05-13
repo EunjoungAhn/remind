@@ -14,9 +14,6 @@
           <li>
             <a href="javascript:void(0)">My Memory</a>
           </li>
-          <li>
-            <a href="javascript:void(0)">Find a Store</a>
-          </li>
         </ul>
 
         <div class="search">
