@@ -18,8 +18,11 @@
 <link rel="alternate" hreflang="x-default" href=""/>
 <link rel="alternate" hreflang="ko-kr" href=""/>
 <link rel="icon" type="image/x-icon" href="/favicon.png" />
-
+<!-- css -->
+<link href="${pageContext.request.contextPath}/resources/css/common.css" rel="stylesheet" />
+<!-- script -->
 <script src="${pageContext.request.contextPath}/resources/scripts/base.js"></script>
+
 
 </head>
 <body>
