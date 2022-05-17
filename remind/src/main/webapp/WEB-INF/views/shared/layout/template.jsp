@@ -21,15 +21,14 @@
 <!-- css -->
 <link href="${pageContext.request.contextPath}/resources/css/common.css" rel="stylesheet" />
 <!-- script -->
-<script src="${pageContext.request.contextPath}/resources/scripts/base.js"></script>
-
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
 </head>
 <body>
     <tiles:insertAttribute name="header" />
-    <div id="container">
-       <tiles:insertAttribute name="body" />
-    </div>
+    
+    <tiles:insertAttribute name="body" />
     
     <tiles:insertAttribute name="footer" />
 </body>
