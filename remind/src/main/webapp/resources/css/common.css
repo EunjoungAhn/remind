@@ -112,8 +112,8 @@ header {
   position: fixed;
   top: 0;
   z-index: 9;
-  background-color: #F6F5F0;
-  border-bottom: 1px solid #c8c8c8;
+  background-color: #faef7e;
+  border-bottom: 1px solid #FFFFFF;
 }
 /* 자식 요소의 inner만 적용되도록 왜냐면, inner라는 공통 클래스를 사용함으로 */
 header > .inner {
@@ -296,8 +296,8 @@ header .badges .badge {
 }
 /*FOOTER*/
 footer {
-  background-color: #272727;
-  border-top: 1px solid #333;
+  background-color: #92B4EC;
+  border-top: 1px solid #FFFFFF;
 }
 footer .inner {
   padding: 40px 0 60px 0;
@@ -329,7 +329,7 @@ footer .menu li:last-child::before {
   display: none;
 }
 footer .menu li a {
-  color: #CCC;
+  color: #FFFFFF;
   font-size: 12px;
   font-weight: 700;
   /* inline요소는 magin과 padding의 위, 아래 값을 정상적으로 사용할 수 없어서 */
@@ -338,7 +338,7 @@ footer .menu li a {
   display: block;
 }
 footer .menu li a.green {
-  color: #669900;
+  color: #FFFFFF;
 }
 /* 푸터 버튼 제어 */
 footer .btn-group {
@@ -359,14 +359,14 @@ footer .info {
 }
 footer .info span {
   margin-right: 20px;
-  color: #999;
+  color: #FFFFFF;
   font-size: 12px;
 }
 footer .info span:last-child {
   margin-right: 0;
 }
 footer .copyright {
-  color: #999;
+  color: #FFFFFF;
   font-size: 12px;
   text-align: center;
   margin-top: 12px;

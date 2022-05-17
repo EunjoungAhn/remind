@@ -1,32 +1,32 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-  <!-- HEAdER -->
-  <header>
-    <div class="inner">
-      <a href="/" class="logo">
-        <img src="" alt="remind logo" />
-      </a>
+ <!-- HEAdER -->
+ <header>
+   <div class="inner">
+     <a href="/ej/home" class="logo">
+       <img src="${pageContext.request.contextPath}/resources/img/remind_logo.jpg" alt="remind logo" />
+     </a>
 
-      <div class="sub-menu">
-        <ul class="menu">
-          <li>
-            <a href="user/register">Sign In</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">My Memory</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">Test1</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">Test2</a>
-          </li>
-        </ul>
+     <div class="sub-menu">
+       <ul class="menu">
+         <li>
+           <a href="user/register">Sign In</a>
+         </li>
+         <li>
+           <a href="javascript:void(0)">My Memory</a>
+         </li>
+         <li>
+           <a href="javascript:void(0)">Test1</a>
+         </li>
+         <li>
+           <a href="javascript:void(0)">Test2</a>
+         </li>
+       </ul>
 
-        <div class="search">
-          <input type="text" />
-          <span class="material-icons">search</span>
-        </div>
-      </div>
+       <div class="search">
+         <input type="text" />
+         <span class="material-icons">search</span>
+       </div>
+     </div>
 
-    </div>
-  </header>
+   </div>
+ </header>

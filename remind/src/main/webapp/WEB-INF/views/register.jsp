@@ -4,23 +4,18 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입</title>
-<style type="text/css">
-body {
-	background-color: lightgray;
-}
-table {
-	font-weight: bold;
-	font-size: 14pt;
-	margin: 0 auto;
-	border-spacing: 2px;
-}
-#btnLogin {
-	width: 150px;
-	text-align: center;
-}
-h1 {
-	text-align: center;
-}
+<!-- css -->
+<link href="${pageContext.request.contextPath}/resources/css/signin.css" rel="stylesheet" />
+<style>
+	.signin{
+		background: url('${pageContext.request.contextPath}/resources/img/signin_bg.jpg');
+		margin-top: 99px;
+	  	padding: 100px 0 150px;
+	  	background-repeat: no-repeat;
+	  	background-position: center;
+	  	background-attachment: fixed;
+	  	background-size: cover;
+	}
 </style>
 </head>
 <body>
@@ -29,7 +24,7 @@ h1 {
 	    <h1>로그인</h1>
 	    <div class="signin__card">
 	      <h2>
-	        <strong>Welcome!</strong> 스타벅스에 오신 것을 환영합니다.
+	        <strong>Welcome!</strong> Remind 오신 것을 환영합니다.
 	      </h2>
 			<form action="../user/create">
 		        <input type="text" name="UserID" placeholder="아이디를 입력하세요." />
