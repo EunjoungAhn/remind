@@ -15,13 +15,13 @@
 			$(document).ready(function(){
 				$('#fullpage').fullpage({
 					//options here
-					licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
 					autoScrolling:true,
 					scrollHorizontally: true,
-					//navigationPosition: 'right',
-					//navigationTooltips: ['1','2','3','4'],
-					//sectionColor: ['#ffcccc', '#ffffcc', '#ffeecc', '#ffeeaa'],
-					//sectionSelector:'.section'
+					sectionsColor: ['#FFE69A','#FFE69A','#FFE69A','#FFE69A'],
+					navigation:true,
+					navigationPosition: 'right',
+					navigationTooltips: ['소개','의미','의도','마무리'],
+					showActiveTooltip: true
 				});
 			});
 		</script>
