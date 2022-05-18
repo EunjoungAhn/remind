@@ -4,21 +4,49 @@
 		<!-- css -->
 		<link href="${pageContext.request.contextPath}/resources/css/jquery.fullPage.css" rel="stylesheet" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-		
+		<!-- 구글폰트 적용 -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
 		<style>
 			video { width: 1920px; height:1080px; display: block; margin: 20px auto; }
-			.animate__animated.animate__bounceInDown {
-			  --animate-duration: 2s;
+			#Introduction{
+				display: flex;
+				justify-content: space-evenly;
+				margin-top: 155px;
+			}
+			#MainText1{
+				width: 560px;
+				height: 750px;
+				font-size: 50px;
+				font-family: 'Black Han Sans', sans-serif;
+			}
+			#Meaning{
+				display: flex;
+				justify-content: space-evenly;
+				margin-top: 155px;
+			}
+			#MainText2{
+				width: 560px;
+				height: 750px;
+				font-size: 50px;
+				font-family: 'Black Han Sans', sans-serif;
+				
+			}
+			#Ending{
+				display: flex;
+				justify-content: space-evenly;
+				margin-top: 155px;
+			}
+			#MainText3{
+				width: 560px;
+				height: 750px;
+				font-size: 50px;
+				font-family: 'Black Han Sans', sans-serif;
 			}
 			
-			.animate__animated animate__zoomInDown{
-			  --animate-duration: 2s;
-			  --animate-delay: 1s;
-			}
-			
-			.animate__animated.animate__heartBeat.active {
-			  --animate-duration: 2s;
-			  --animate-delay: 3s;
+			.zoomInLeft{
+				justify-content: space-evenly;
 			}
 		</style>
 		
@@ -29,22 +57,51 @@
 			      <source src="${pageContext.request.contextPath}/resources/img/video.mp4" type="video/mp4">
 			    </video>
 			</div>
-			<div class="section" id="section2">
-				<h5 class="animate__animated bounceInDown">Remind</h5>
-				<h5 class="animate__animated zoomInDown">으아아아아!</h5>
-				<h5 class="animate__animated heartBeat">머리 지끈</h5>
+			<div class="section">
+				<div id="Introduction">
+					<div id="MainText1">
+						아직도 종이에 적어가며 <br/>
+						공부 중인가요?<br/>
+						단어 공부를 할때마다 누군가 도와주셨나요?<br/>
+						<br/>
+						이젠 걱정마세요.
+					</div>
+					<div>
+						<img class="animate__animated heartBeat" src="${pageContext.request.contextPath}/resources/img/heartBeat.jpg" alt="의미" />
+					</div>
+				</div>
 			</div>
 			<div class="section">
-				<h5>Remind</h5>
-				<h5 class="animate__animated jackInTheBox">머리 지끈</h5>
+				<div id="Meaning">
+					<div id="MainText2">
+						Remind가 도와드립니다!<br/>
+						<br/>
+						단어 공부 <br/>
+						Rmind와 함께하세요!<br/>
+					</div>
+					<div>
+						<img class="animate__animated jackInTheBox" src="${pageContext.request.contextPath}/resources/img/jackInTheBox.jpg" alt="의도" />
+					</div>
+				</div>
 			</div>
-			<div class="section">
-				<h5>Remind</h5>
-				<h5 class="animate__animated slideOutUp">머리 지끈</h5>
+			<div class="section" >
+				<div id="Ending">
+					<div id="MainText3">
+						당신의 시험<br/>
+						당신의 취업<br/>
+						당신의 기억력<br/>
+						<br/>
+						Remind와 함께해보세요!
+					</div>
+					<div>
+						<img class="animate__animated zoomInLeft" src="${pageContext.request.contextPath}/resources/img/zoomInLeft.jpg" alt="마무리" />
+					</div>
+				</div>
 			</div>
 		</div>
 		
 		<script>
+			//animateCSS 설정을 위한 함수 적용
 			function animateCSS(element, animationName, callback) {
 			    const node = document.querySelector(element)
 			    node.classList.add('animated', animationName)
@@ -61,7 +118,7 @@
 		
 			$(document).ready(function(){
 				$('#fullpage').fullpage({
-					//options here
+					//fullpage options
 					autoScrolling:true,
 					scrollHorizontally: true,
 					sectionsColor: ['#FFE69A','#FFE69A','#FFE69A','#FFE69A'],
@@ -70,7 +127,6 @@
 					navigationTooltips: ['소개','의미','의도','마무리'],
 					showActiveTooltip: true,
 					fixedElements: '#footer',
-					
 					// 특정 인덱스일 때
 					'afterLoad': function (anchorLink, index) {
 						if (index == 1){
@@ -78,27 +134,15 @@
 							document.getElementById('vid').play();
 						}else if(index == 2){
 							console.log('2번째 인덱스!');
-							animateCSS('.bounceInDown', 'animate__bounceInDown')
-							animateCSS('.zoomInDown', 'animate__zoomInDown')
 							animateCSS('.heartBeat', 'animate__heartBeat')
 						}else if(index == 3){
 							console.log('3번째 인덱스');
 							animateCSS('.jackInTheBox', 'animate__jackInTheBox')
 						}else if(index == 4){
 							console.log('4번째 인덱스');
-							animateCSS('.slideOutUp', 'animate__slideOutUp')
+							animateCSS('.zoomInLeft', 'animate__zoomInLeft')
 						}
 					},	
-					/*
-					// 페이지 이동할 때
-					'onLeave' : function (index, nextIndex, direction){
-						if (index == 3 && direction == 'down'){
-							alert ('3번에서 4번으로');
-						} else if (index == 3 && direction == 'up'){
-							alert ('3번에서 2번으로');
-						}
-					}
-					*/
 				});
 			});
 		</script>
