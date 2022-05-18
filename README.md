@@ -2,10 +2,11 @@
 
 1. GCP를 이용한 클라우드 서버 연동.
 2. MYSQL를 이용한 DB 관리.
-3. 메인 home 화면을 fullPage 작업을 하였다. 
+3. 메인 home 화면을 fullPage 작업을 하였다.</br>
 기존 간단한 소스를 적용후, 조금 더 이쁜 무료 라이브러리 fullpage.js 소스로 대체하였다.</br>
 4.메인 home의 애니메이션은 https://animate.style/#usage 의 Animate.css cdn을 사용하였다.
-Animate.CSS 응용하기
+
+### Animate.css 응용하기
 
 ```javascript
 function animateCSS(element, animationName, callback) {
