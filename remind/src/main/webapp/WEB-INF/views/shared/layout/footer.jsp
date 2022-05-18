@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
   <!--FOOTER-->
   <footer>
-    <div class="inner">
+    <div class="inner" id="footer">
 
       <ul class="menu">
         <li><a href="javascript:void(0)" class="green">개인정보처리방침</a></li>

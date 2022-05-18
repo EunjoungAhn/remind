@@ -3,12 +3,45 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 		<!-- css -->
 		<link href="${pageContext.request.contextPath}/resources/css/jquery.fullPage.css" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		
+		<style>
+			video { width: 1920px; height:1080px; display: block; margin: 20px auto; }
+			.animate__animated.animate__bounceInDown {
+			  --animate-duration: 2s;
+			}
+			
+			.animate__animated.animate__zoomInDown {
+			  --animate-duration: 2s;
+			  --animate-delay: 1s;
+			}
+			
+			.animate__animated.animate__heartBeat {
+			  --animate-duration: 2s;
+			  --animate-delay: 3s;
+			}
+		</style>
 		
 		<div id="fullpage">
-			<div class="section">Some section1</div>
-			<div class="section">Some section2</div>
-			<div class="section">Some section3</div>
-			<div class="section">Some section4</div>
+			<div class="section">
+				<!--VIDEO-->
+				<video muted autoplay loop id="vid">
+			      <source src="${pageContext.request.contextPath}/resources/img/video.mp4" type="video/mp4">
+			    </video>
+			</div>
+			<div class="section">
+				<h5 class="animate__animated animate__bounceInDown">Remind</h5>
+				<h5 class="animate__animated animate__zoomInDown">으아아아아!</h5>
+				<h5 class="animate__animated animate__heartBeat">머리 지끈</h5>
+			</div>
+			<div class="section">
+				<h5>Remind</h5>
+				<h5 class="animate__animated animate__heartBeat">머리 지끈</h5>
+			</div>
+			<div class="section">
+				<h5>Remind</h5>
+				<h5 class="animate__animated animate__slideOutUp">머리 지끈</h5>
+			</div>
 		</div>
 		
 		<script>
@@ -21,7 +54,32 @@
 					navigation:true,
 					navigationPosition: 'right',
 					navigationTooltips: ['소개','의미','의도','마무리'],
-					showActiveTooltip: true
+					showActiveTooltip: true,
+					fixedElements: '#footer',
+					
+					// 특정 인덱스일 때
+					'afterLoad': function (anchorLink, index) {
+						if (index == 1){
+							console.log('1번째 인덱스');
+							document.getElementById('vid').play();
+						}else if(index == 2){
+							console.log('2번째 인덱스');
+						}else if(index == 3){
+							console.log('3번째 인덱스');
+						}else if(index == 4){
+							console.log('4번째 인덱스');
+						}
+					},	
+					/*
+					// 페이지 이동할 때
+					'onLeave' : function (index, nextIndex, direction){
+						if (index == 3 && direction == 'down'){
+							alert ('3번에서 4번으로');
+						} else if (index == 3 && direction == 'up'){
+							alert ('3번에서 2번으로');
+						}
+					}
+					*/
 				});
 			});
 		</script>
