@@ -11,12 +11,12 @@
 			  --animate-duration: 2s;
 			}
 			
-			.animate__animated.animate__zoomInDown {
+			.animate__animated animate__zoomInDown{
 			  --animate-duration: 2s;
 			  --animate-delay: 1s;
 			}
 			
-			.animate__animated.animate__heartBeat {
+			.animate__animated.animate__heartBeat.active {
 			  --animate-duration: 2s;
 			  --animate-delay: 3s;
 			}
@@ -29,22 +29,36 @@
 			      <source src="${pageContext.request.contextPath}/resources/img/video.mp4" type="video/mp4">
 			    </video>
 			</div>
-			<div class="section">
-				<h5 class="animate__animated animate__bounceInDown">Remind</h5>
-				<h5 class="animate__animated animate__zoomInDown">으아아아아!</h5>
-				<h5 class="animate__animated animate__heartBeat">머리 지끈</h5>
+			<div class="section" id="section2">
+				<h5 class="animate__animated bounceInDown">Remind</h5>
+				<h5 class="animate__animated zoomInDown">으아아아아!</h5>
+				<h5 class="animate__animated heartBeat">머리 지끈</h5>
 			</div>
 			<div class="section">
 				<h5>Remind</h5>
-				<h5 class="animate__animated animate__heartBeat">머리 지끈</h5>
+				<h5 class="animate__animated jackInTheBox">머리 지끈</h5>
 			</div>
 			<div class="section">
 				<h5>Remind</h5>
-				<h5 class="animate__animated animate__slideOutUp">머리 지끈</h5>
+				<h5 class="animate__animated slideOutUp">머리 지끈</h5>
 			</div>
 		</div>
 		
 		<script>
+			function animateCSS(element, animationName, callback) {
+			    const node = document.querySelector(element)
+			    node.classList.add('animated', animationName)
+	
+			    function handleAnimationEnd() {
+			        node.classList.remove('animated', animationName)
+			        node.removeEventListener('animationend', handleAnimationEnd)
+	
+			        if (typeof callback === 'function') callback()
+			    }
+	
+			    node.addEventListener('animationend', handleAnimationEnd)
+			}	
+		
 			$(document).ready(function(){
 				$('#fullpage').fullpage({
 					//options here
@@ -64,10 +78,15 @@
 							document.getElementById('vid').play();
 						}else if(index == 2){
 							console.log('2번째 인덱스!');
+							animateCSS('.bounceInDown', 'animate__bounceInDown')
+							animateCSS('.zoomInDown', 'animate__zoomInDown')
+							animateCSS('.heartBeat', 'animate__heartBeat')
 						}else if(index == 3){
 							console.log('3번째 인덱스');
+							animateCSS('.jackInTheBox', 'animate__jackInTheBox')
 						}else if(index == 4){
 							console.log('4번째 인덱스');
+							animateCSS('.slideOutUp', 'animate__slideOutUp')
 						}
 					},	
 					/*
