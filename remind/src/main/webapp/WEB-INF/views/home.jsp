@@ -63,7 +63,7 @@
 							console.log('1번째 인덱스');
 							document.getElementById('vid').play();
 						}else if(index == 2){
-							console.log('2번째 인덱스');
+							console.log('2번째 인덱스!');
 						}else if(index == 3){
 							console.log('3번째 인덱스');
 						}else if(index == 4){
