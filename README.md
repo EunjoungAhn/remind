@@ -2,9 +2,12 @@
 
 1. GCP를 이용한 클라우드 서버 연동.
 2. MYSQL를 이용한 DB 관리.
-3. 메인 home 화면을 fullPage 작업을 하였다.</br>
-기존 간단한 소스를 적용후, 조금 더 이쁜 무료 라이브러리 fullpage.js 소스로 대체하였다.</br>
+3. 메인 home 화면을 fullPage 작업을 하였다.
+기존 간단한 소스를 적용후, 조금 더 이쁜 무료 라이브러리 fullpage.js 소스로 대체하였다.
+<br>
 4.메인 home의 애니메이션은 https://animate.style/#usage 의 Animate.css cdn을 사용하였다.
+<br>
+5.구글 폰트 적용. https://fonts.google.com/?subset=korean
 
 ### Animate.css 응용하기
 
@@ -23,7 +26,7 @@ function animateCSS(element, animationName, callback) {
     node.addEventListener('animationend', handleAnimationEnd)
 }
 ```
-자바스크릅트 소스를 넣은 후</br>
+자바스크릅트 소스를 넣은 후<br>
 실행하고자 하는 위치를 설정하면 됩니다.
 ```javascript
   animateCSS('.my-element', 'bounce')
@@ -153,7 +156,7 @@ function animateCSS(element, animationName, callback) {
         }
 ```
 위 소스의 출처: https://webty.tistory.com/106f
-</br>
+<br>
 fullPage.js 출처: https://github.com/alvarotrigo/fullPage.js/
 
 # 프로젝트 개요:
