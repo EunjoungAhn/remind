@@ -12,7 +12,7 @@
            <a href="/ej/user/register">Sign In</a>
          </li>
          <li>
-           <a href="/ej/user/myMemory">My Memory</a>
+           <a href="/ej/user/myMemoryEdit">My Memory</a>
          </li>
        </ul>
 

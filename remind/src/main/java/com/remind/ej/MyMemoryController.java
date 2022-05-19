@@ -10,9 +10,9 @@ public class MyMemoryController {
 	@Autowired
 	UserService service;
 
-	@RequestMapping("user/myMemory")
-	public String myMemory() {
-		return "myMemory";
+	@RequestMapping("user/myMemoryEdit")
+	public String myMemoryEdit() {
+		return "myMemoryEdit";
 	}
 	
 	/*
