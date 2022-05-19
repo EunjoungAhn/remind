@@ -44,6 +44,27 @@
 				font-size: 50px;
 				font-family: 'Black Han Sans', sans-serif;
 			}
+			#MainText3 .overflow {
+			  position: relative;
+			  margin: 0px auto;
+			  width: 200px;
+			  overflow: hidden;
+			  text-align: right;
+			}
+			#MainText3 .overflow .text {
+			  display: inline-block;
+			  border-bottom: 5px solid #333;
+			  overflow: hidden;
+			  margin: 5px 0px;
+			  text-align: center;
+			  font-size: 30px;
+			  font-weight: bold;
+			}
+			#MainText3 .overflow .text span {
+			    display: inline-block;
+			    padding: 0px 0px 0px 5px;
+			    letter-spacing: 1px;
+			}
 			
 			.zoomInLeft{
 				justify-content: space-evenly;
@@ -87,11 +108,19 @@
 			<div class="section" >
 				<div id="Ending">
 					<div id="MainText3">
-						당신의 시험<br/>
-						당신의 취업<br/>
-						당신의 기억력<br/>
-						<br/>
-						Remind와 함께해보세요!
+						<div class="overflow">
+    						<div class="text"><span>당신의 시험</span></div><br/>
+  						</div>
+  						<div class="overflow">
+    						<div class="text"><span>당신의 취업</span></div><br/>
+  						</div>
+  						<div class="overflow">
+    						<div class="text"><span>당신의 기억력</span></div><br/>
+  						</div>
+  						<br/>
+  						<div class="overflow">
+    						<div class="text"><span>Remind와 함께해보세요!</span></div>
+  						</div>
 					</div>
 					<div>
 						<img class="animate__animated zoomInLeft" src="${pageContext.request.contextPath}/resources/img/zoomInLeft.jpg" alt="마무리" />
@@ -140,6 +169,28 @@
 							animateCSS('.jackInTheBox', 'animate__jackInTheBox')
 						}else if(index == 4){
 							console.log('4번째 인덱스');
+							new Scene({
+								  ".overflow .text span": i => ({
+								    0: {
+								      transform: {
+								        translateY: "100%",
+								      }
+								    },
+								    1: {
+								      transform: {
+								        translateY: "0%",
+								      }
+								    },
+								    options: {
+								      delay: i * 0.5,
+								    }
+								  }),
+								}, {
+								  easing: "ease-in-out",
+								  selector: true,
+								  direction: "alternate",
+								  iterationCount: "infinite",
+								}).play();
 							animateCSS('.zoomInLeft', 'animate__zoomInLeft')
 						}
 					},	
@@ -148,3 +199,4 @@
 		</script>
 		<!-- script -->
 		<script src="${pageContext.request.contextPath}/resources/js/jquery.fullPage.js"></script>
+		<script src="//daybrush.com/scenejs/release/latest/dist/scene.min.js"></script>

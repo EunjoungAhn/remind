@@ -9,16 +9,10 @@
      <div class="sub-menu">
        <ul class="menu">
          <li>
-           <a href="user/register">Sign In</a>
+           <a href="/ej/user/register">Sign In</a>
          </li>
          <li>
-           <a href="javascript:void(0)">My Memory</a>
-         </li>
-         <li>
-           <a href="javascript:void(0)">Test1</a>
-         </li>
-         <li>
-           <a href="javascript:void(0)">Test2</a>
+           <a href="/ej/user/myMemory">My Memory</a>
          </li>
        </ul>
 
