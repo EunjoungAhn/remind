@@ -1,5 +1,10 @@
 package com.remind.ej;
 
+import java.util.HashMap;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,9 +14,21 @@ public class MyMemoryController {
 	
 	@Autowired
 	MemoryService service;
+	
+	@Autowired
+	HttpServletRequest request;
 
 	@RequestMapping("user/myMemoryEdit")
-	public String myMemoryEdit() {
+	public String myMemoryEdit(HttpServletRequest request) {
+		
+		String question1 = request.getParameter("question1");
+		
+		HashMap map = new HashMap();
+		map.put("question1", question1);
+		
+		
+		
+		
 		return "myMemoryEdit";
 	}
 	

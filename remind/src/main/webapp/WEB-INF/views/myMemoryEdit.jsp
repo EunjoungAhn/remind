@@ -1,9 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>회원가입</title>
 <!-- css -->
 <link href="${pageContext.request.contextPath}/resources/css/signin.css" rel="stylesheet" />
 <style>
@@ -58,60 +53,74 @@
 	}
 
 </style>
-</head>
+
+
+<form id="frm">
 	<div class="myMemory_wrap">
        <h1 class="title" style="margin-top: 150px; margin-bottom: 50px;">카드 추가/삭제</h1>
        <div class="title" id='result'>0</div>
        <button id="number" style="margin-bottom: 50px;" onclick="fnAdd()" type="button">+ 추가</button>
    </div>
    <div id="sumbit">
-   		<button onclick="fnSave()" type="submit">단어 등록하기</button>
+   		<button onclick="fnSave()" type="button">단어 등록하기</button>
    </div>
+</form>
 <!-- script -->
 <script type="text/javascript">
 	//단어 카드 추가
-	var card_number = 0;
-	var card_num = 0;
-	var card_list = document.getElementsByClassName("memoryRow");
-	var resultElement = document.getElementById('result');
+	var card_number = ($(".memoryRow").length)+1;
 	function fnAdd() {
-		//카드 개수 증가
-		for(var i=0; i < card_list.length; i++){
-			card_num++;
-		};
-		card_number = resultElement.innerText = card_list.length+1;
-		console.log("카드 갯수:",card_number);
-
-		card_num++;
-		
-		var tags = `<div class='memoryRow' id="row_`+card_number+`">
-						<div class='memoryCard'>`+card_number+`</div>
-						<div class='memoryCard'>
-							<input class="textInput"/>
-						</div>
-						<div class='memoryCard'>
-							<input class="textInput"/>
-						</div>
-						<div class='memoryCard'>
-							<button onclick="fnDelete(`+card_number+`)" type="button">삭제</button>
-						</div>
-					</div>`;
+		var tags = '';
+		tags += '<div class="memoryRow" id="row_'+card_number+'">';
+		tags += '<div class="memoryCard boxIdx">'+card_number+'</div>';
+		tags += '<div class="memoryCard">';
+		tags += '<input name="question1" class="textInput"/>';
+		tags += '</div>'
+		tags += '<div class="memoryCard">';
+		tags += '<input class="textInput"/>';
+		tags += '</div>';
+		tags += '<div class="memoryCard">';
+		tags += '<button onclick="fnDelete(this);" type="button">삭제</button>';
+		tags += '</div>';
+		tags += '</div>';
         $(".myMemory_wrap").append(tags);
-        card_num++;
+        $("#result").html(card_number)
+        card_number++;
 	};
 	
-	function fnDelete(card_number) {
-		console.log("삭제한 번호:",card_number);
-		$("#row_"+card_number).remove();
-		resultElement.innerText = card_list.length;
-		//번호 재배열
-		for(var i=0; i < card_list.length; i++){
-			card_num++;
-		};
+	function fnDelete(element) {		
+		element.closest(".memoryRow").remove();				
+		$("#result").html($(".memoryRow").length);
+		let cnt = 1;
+		$(".boxIdx").each(function(){			
+			$(this).html(cnt);
+			cnt++;
+		});
 	};
 	
 	function fnSave(){
 		console.log("등록함수");
+		
+		let ques1 = "";
+		$("input[name=question1]").each(function (){
+			ques1 += $(this).val()+",";
+		});
+		ques1 = ques1.split()
+		
+		let data = {
+				question1 : ques1
+		};
+		console.log(data);
+		/*
+		$.ajax({
+			url: '/user/myMemoryEdit',
+			type: "post",
+			data: data,
+			success: function(rst){
+				
+			}		
+		});
+		*/
+		
 	};
 </script>
-</html>
