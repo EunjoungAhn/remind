@@ -51,6 +51,11 @@
 		color:white; 
 		background-color: #92B4EC;
 	}
+	#sumbit{
+		margin-top: 50px;
+		margin-bottom: 50px;
+		text-align: center;
+	}
 
 </style>
 </head>
@@ -58,41 +63,52 @@
        <h1 class="title" style="margin-top: 150px; margin-bottom: 50px;">카드 추가/삭제</h1>
        <div class="title" id='result'>0</div>
        <button id="number" style="margin-bottom: 50px;" onclick="fnAdd()" type="button">+ 추가</button>
-       
+   </div>
+   <div id="sumbit">
+   		<button onclick="fnSave()" type="submit">단어 등록하기</button>
    </div>
 <!-- script -->
 <script type="text/javascript">
 	//단어 카드 추가
-	var num = 1;
+	var card_number = 0;
+	var card_num = 0;
+	var card_list = document.getElementsByClassName("memoryRow");
 	var resultElement = document.getElementById('result');
-	var number = resultElement.innerText;
 	function fnAdd() {
-		console.log("추가 함수 들어옴");
-		number = parseInt(number) + 1;
-		resultElement.innerText = number;
-		var tags = `<div class='memoryRow' id="row_`+num+`">
-						<div class="memoryCard">
-						</div>
-						<div class="memoryCard">
+		//카드 개수 증가
+		for(var i=0; i < card_list.length; i++){
+			card_num++;
+		};
+		card_number = resultElement.innerText = card_list.length+1;
+		console.log("카드 갯수:",card_number);
+
+			card_num++;
+		}
+		
+		var tags = `<div class='memoryRow' id="row_`+card_number+`">
+						<div class='memoryCard'>`+card_number+`</div>
+						<div class='memoryCard'>
 							<input class="textInput"/>
 						</div>
-						<div class="memoryCard">
+						<div class='memoryCard'>
 							<input class="textInput"/>
 						</div>
-						<div class="memoryCard">
-							<button onclick="fnDelete(`+num+`)" type="button">삭제</button>
+						<div class='memoryCard'>
+							<button onclick="fnDelete(`+card_number+`)" type="button">삭제</button>
 						</div>
 					</div>`;
         $(".myMemory_wrap").append(tags);
-        num++;
+        card_num++;
 	};
 	
-	function fnDelete(num) {
-		console.log("삭제 클릭함", num);
-		number = parseInt(number) - 1;
-		resultElement.innerText = number;
-		$("#row_"+num).remove();
-		num--;
+	function fnDelete(card_number) {
+		console.log("삭제한 번호:",card_number);
+		$("#row_"+card_number).remove();
+		resultElement.innerText = card_list.length;
+	};
+	
+	function fnSave(){
+		console.log("등록함수");
 	};
 </script>
 </html>
