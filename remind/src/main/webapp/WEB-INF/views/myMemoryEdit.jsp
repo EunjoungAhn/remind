@@ -82,8 +82,7 @@
 		card_number = resultElement.innerText = card_list.length+1;
 		console.log("카드 갯수:",card_number);
 
-			card_num++;
-		}
+		card_num++;
 		
 		var tags = `<div class='memoryRow' id="row_`+card_number+`">
 						<div class='memoryCard'>`+card_number+`</div>
@@ -105,6 +104,10 @@
 		console.log("삭제한 번호:",card_number);
 		$("#row_"+card_number).remove();
 		resultElement.innerText = card_list.length;
+		//번호 재배열
+		for(var i=0; i < card_list.length; i++){
+			card_num++;
+		};
 	};
 	
 	function fnSave(){

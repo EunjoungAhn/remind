@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="memory">
+	<insert id="create" parameterType="memoryVO">
+		INSERT INTO Member(UserID, Password) VALUES (#{UserID}, #{Password})
+	</insert>
+
+	<select id="read" parameterType="memoryVO" resultType="memoryVO">
+		SELECT UserID, Password FROM Member WHERE UserID = #{UserID} AND Password = #{Password};
+	</select>
+	
+	<select id="readUID" parameterType="String" resultType="Integer">
+		SELECT count(UserID) FROM Member WHERE UserID = #{UserID};
+	</select>
+</mapper>
