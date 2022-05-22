@@ -84,8 +84,13 @@
 		tags += '</div>';
 		tags += '</div>';
         $(".myMemory_wrap").append(tags);
-        $("#result").html(card_number)
+        $("#result").html($(".memoryRow").length);
         card_number++;
+        let cnt = 1;
+		$(".boxIdx").each(function(){			
+			$(this).html(cnt);
+			cnt++;
+		});
 	};
 	
 	function fnDelete(element) {		
