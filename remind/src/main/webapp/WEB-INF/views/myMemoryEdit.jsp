@@ -74,10 +74,10 @@
 		tags += '<div class="memoryRow" id="row_'+card_number+'">';
 		tags += '<div class="memoryCard boxIdx">'+card_number+'</div>';
 		tags += '<div class="memoryCard">';
-		tags += '<input name="question1" class="textInput"/>';
+		tags += '<input name="word" class="textInput"/>';
 		tags += '</div>'
 		tags += '<div class="memoryCard">';
-		tags += '<input class="textInput"/>';
+		tags += '<input name="mean" class="textInput"/>';
 		tags += '</div>';
 		tags += '<div class="memoryCard">';
 		tags += '<button onclick="fnDelete(this);" type="button">삭제</button>';
@@ -104,18 +104,27 @@
 	};
 	
 	function fnSave(){
-		console.log("등록함수");
-		
-		let ques1 = "";
-		$("input[name=question1]").each(function (){
-			ques1 += $(this).val()+",";
+		//단어
+		let words = "";
+		$("input[name=word]").each(function (){
+			words += $(this).val()+",";
 		});
-		ques1 = ques1.split()
+		words = fnSubstring(words);
+		console.log("words",words);
+		
+		//뜻
+		let means = "";
+		$("input[name=mean]").each(function (){
+			means += $(this).val()+",";
+		});
+		means = fnSubstring(means);
+		console.log("means",means);
 		
 		let data = {
-				question1 : ques1
+				word : words,
+				mean : means
 		};
-		console.log(data);
+		console.log("등록함수",data);
 		/*
 		$.ajax({
 			url: '/user/myMemoryEdit',
@@ -126,6 +135,10 @@
 			}		
 		});
 		*/
-		
 	};
+
+	function fnSubstring(str){
+		let arrData = str.substring(0, str.length - 1);
+		return arrData;
+	}
 </script>
