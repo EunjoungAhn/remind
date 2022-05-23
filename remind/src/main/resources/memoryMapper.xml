@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="memory">
-	<insert id="create" parameterType="memoryVO">
-		INSERT INTO Member(UserID, Password) VALUES (#{UserID}, #{Password})
+	<insert id="create" parameterType="java.util.List">
+		INSERT INTO Member(UserID, Password) VALUES (#{word}, #{mean})
 	</insert>
 
 	<select id="read" parameterType="memoryVO" resultType="memoryVO">

@@ -1,20 +1,10 @@
 package com.remind.ej;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import java.util.Map;
 
-@Service
-public class MemoryService {
+public interface MemoryService {
 	
-	@Autowired
-	MemoryDAO dao;
-	
-	public int create(MemoryVO vo) {
-		return dao.create(vo);
-	}
-	
-	public MemoryVO read(MemoryVO vo) {
-		return dao.read(vo);
-	}
+	public int create(Map map) throws Exception;
 	
 }
+

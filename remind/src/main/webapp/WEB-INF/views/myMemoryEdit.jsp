@@ -102,7 +102,7 @@
 			cnt++;
 		});
 	};
-	
+	//저장 함수
 	function fnSave(){
 		//단어
 		let words = "";
@@ -124,19 +124,24 @@
 				word : words,
 				mean : means
 		};
+		
 		console.log("등록함수",data);
-		/*
+		
 		$.ajax({
-			url: '/user/myMemoryEdit',
+			url: '/ej/user/myMemorySave',
 			type: "post",
-			data: data,
-			success: function(rst){
-				
-			}		
+			data: data,				
+			success: function(data){
+				//location.href="addMemorySuccess";
+			},
+			error : function() {
+				alert("error");
+			}
 		});
-		*/
+		
 	};
-
+	
+	//마지막 콤마 제거 함수
 	function fnSubstring(str){
 		let arrData = str.substring(0, str.length - 1);
 		return arrData;
