@@ -1,4 +1,4 @@
-package com.remind.ej;
+package com.remind.ej.member;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

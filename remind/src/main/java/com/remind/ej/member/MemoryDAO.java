@@ -1,4 +1,4 @@
-package com.remind.ej;
+package com.remind.ej.member;
 
 import java.util.ArrayList;
 

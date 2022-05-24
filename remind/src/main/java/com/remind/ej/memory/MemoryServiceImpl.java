@@ -1,4 +1,4 @@
-package com.remind.ej;
+package com.remind.ej.memory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,6 +7,8 @@ import java.util.Map;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
+
+import com.remind.ej.member.MemoryDAO;
 
 @Service("memoryService")
 public class MemoryServiceImpl implements MemoryService {

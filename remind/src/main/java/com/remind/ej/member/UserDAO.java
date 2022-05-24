@@ -1,4 +1,4 @@
-package com.remind.ej;
+package com.remind.ej.member;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;

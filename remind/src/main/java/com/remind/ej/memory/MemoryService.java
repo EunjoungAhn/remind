@@ -1,4 +1,4 @@
-package com.remind.ej;
+package com.remind.ej.memory;
 
 import java.util.Map;
 

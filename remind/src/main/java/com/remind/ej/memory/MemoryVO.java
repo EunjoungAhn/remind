@@ -1,4 +1,4 @@
-package com.remind.ej;
+package com.remind.ej.memory;
 
 public class MemoryVO {
 	private String Question;
