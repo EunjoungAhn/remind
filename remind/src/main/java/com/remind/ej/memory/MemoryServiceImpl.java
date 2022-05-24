@@ -8,8 +8,6 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.remind.ej.member.MemoryDAO;
-
 @Service("memoryService")
 public class MemoryServiceImpl implements MemoryService {
 	
