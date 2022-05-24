@@ -128,7 +128,7 @@
 		console.log("등록함수",data);
 		
 		$.ajax({
-			url: '/ej/user/myMemorySave',
+			url: '/user/myMemorySave',
 			type: "post",
 			data: data,				
 			success: function(data){

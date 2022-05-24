@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service("memoryService")
 public class MemoryServiceImpl implements MemoryService {
 	
-	@Resource(name="memoryDao")
+	@Resource(name="memoryDAO")
 	private MemoryDAO dao;
 	
 	@Override

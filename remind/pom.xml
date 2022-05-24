@@ -125,15 +125,20 @@
 		</dependency>
 		
 		<!-- 기존 내 설정 -->
-
-		<!-- mysql connector -->
-		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	 	<!-- MSSQL Connector -->
 		<dependency>
-		    <groupId>mysql</groupId>
-		    <artifactId>mysql-connector-java</artifactId>
-		    <version>8.0.28</version>
+		    <groupId>com.microsoft.sqlserver</groupId>
+		    <artifactId>mssql-jdbc</artifactId>
+		    <version>6.4.0.jre8</version>
 		</dependency>
-
+		
+		<!-- 스프링에서 JDBC 를 사용하기 위한 라이브러리 입니다. -->
+		<dependency>
+		   <groupId>org.springframework</groupId>
+		   <artifactId>spring-jdbc</artifactId>
+		   <version>${org.springframework-version}</version>
+		</dependency>
+		
 
 		<!-- mybatis -->
 		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->

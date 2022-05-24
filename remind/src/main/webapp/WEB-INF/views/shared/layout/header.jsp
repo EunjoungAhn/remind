@@ -2,17 +2,17 @@
  <!-- HEAdER -->
  <header>
    <div class="inner">
-     <a href="/ej/home" class="logo">
+     <a href="/home" class="logo">
        <img src="${pageContext.request.contextPath}/resources/img/remind_logo.jpg" alt="remind logo" />
      </a>
 
      <div class="sub-menu">
        <ul class="menu">
          <li>
-           <a href="/ej/user/register">Sign In</a>
+           <a href="/user/register">Sign In</a>
          </li>
          <li>
-           <a href="/ej/user/myMemoryEdit">My Memory</a>
+           <a href="/user/myMemoryEdit">My Memory</a>
          </li>
        </ul>
 

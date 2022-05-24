@@ -23,7 +23,7 @@ public class MyMemoryController {
 	@Autowired
 	HttpServletRequest request;	
 
-	// 카드 추가/삭제 진입
+	// 카드 추가/삭제 진입	
 	@RequestMapping(value="/user/myMemoryEdit")
 	public String myMemoryEdit() {		
 		return "myMemoryEdit";

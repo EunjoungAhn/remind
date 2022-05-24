@@ -1,6 +1,6 @@
 package com.remind.ej;
 
-import org.mybatis.spring.SqlSessionTemplate;
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -8,20 +8,28 @@ import org.springframework.stereotype.Repository;
 public class UserDAO{
 
 	@Autowired
-	SqlSessionTemplate mybatis;
+	private SqlSession sqlSession;
+	
+	public SqlSession getSqlSession() {
+		return sqlSession;
+	}
+
+	public void setSqlSession(SqlSession sqlSession) {
+		this.sqlSession = sqlSession;
+	}
 	
 	public int create(UserVO vo) {
-		int result = mybatis.insert("user.create", vo);
+		int result = sqlSession.insert("user.create", vo);
 		return result;
 	}
 	
 	public UserVO read(UserVO vo) {
-		UserVO userVO = mybatis.selectOne("user.read", vo);
+		UserVO userVO = sqlSession.selectOne("user.read", vo);
 		return userVO;
 	}
 	
 	public int readUID(String uID) {
-		int result = mybatis.selectOne("user.readUID", uID);
+		int result = sqlSession.selectOne("user.readUID", uID);
 		return result;
 	}
 }
