@@ -54,7 +54,6 @@
 
 </style>
 
-
 <form id="frm">
 	<div class="myMemory_wrap">
        <h1 class="title" style="margin-top: 150px; margin-bottom: 50px;">카드 추가/삭제</h1>
@@ -132,6 +131,7 @@
 			type: "post",
 			data: data,				
 			success: function(data){
+				console.log(data);
 				//location.href="addMemorySuccess";
 			},
 			error : function() {

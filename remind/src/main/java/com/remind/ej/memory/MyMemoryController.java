@@ -36,8 +36,7 @@ public class MyMemoryController {
 		System.out.println("Edit 들어옴!");
 		
 		int result = 0; // default 싦패
-		
-		MemoryVO setVo = memoryVO;
+				
 		Map map = new HashMap();
 		map.put("word", request.getParameter("word"));
 		map.put("mean", request.getParameter("mean"));

@@ -13,6 +13,8 @@ public class MemoryDAO{
 	private SqlSession sqlSession;
 	
 	public int create(ArrayList list) {
+		System.out.println("MemoryDAO");
+		System.out.println(list);
 		int result = 0;
 		result = sqlSession.insert("memory.create", list);
 		return result;
