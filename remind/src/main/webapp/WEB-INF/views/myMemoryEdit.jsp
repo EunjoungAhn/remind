@@ -132,7 +132,7 @@
 			data: data,				
 			success: function(data){
 				console.log(data);
-				//location.href="addMemorySuccess";
+				location.href="addMemorySuccess";
 			},
 			error : function() {
 				alert("error");
